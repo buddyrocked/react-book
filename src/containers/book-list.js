@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-export default class BookList extends Component {
+class BookList extends Component {
     renderList(){
         return this.props.books.map((book)=>{
             return (
@@ -24,3 +24,5 @@ function mapStateToProps(state){
         books: state.books
     };
 }
+
+export default connect(mapStateToProps)(BookList);
