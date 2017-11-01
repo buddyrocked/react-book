@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 export default class BookList extends Component {
     renderList(){
@@ -16,4 +17,10 @@ export default class BookList extends Component {
             </ul>
         )
     }
+}
+
+function mapStateToProps(state){
+    return {
+        books: state.books
+    };
 }
